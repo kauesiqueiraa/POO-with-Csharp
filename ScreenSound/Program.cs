@@ -23,3 +23,18 @@ music2.DisplayTechnicalSheet();
 albumDoHungria.DisplayMusicFromAlbum();
 hungria.AddAlbum(albumDoHungria);
 hungria.DisplayDiscography();
+
+Episode ep1 = new(1, "Técnicas de facilitação", 45);
+ep1.AddGuest("Maria");
+ep1.AddGuest("Junior");
+
+Episode ep2 = new(2, "Técnicas de aprendizado", 45);
+ep2.AddGuest("Fernando");
+ep2.AddGuest("Marcos");
+ep2.AddGuest("Juliana");
+
+Podcast podcast = new("Podcast Dev", "Kauè");
+podcast.AddEpisode(ep1);
+podcast.AddEpisode(ep2);
+podcast.DisplayDetails();   
+
