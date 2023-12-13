@@ -1,15 +1,15 @@
-﻿Music music1 = new Music();
-music1.Name = "Lobo Guará";
-music1.Artist = "Hungria";
-music1.Duration = 271;
-music1.Disponible = true;
-Console.WriteLine(music1.Description);
+﻿Album albumDoHungria = new Album();
+albumDoHungria.Name = "Hungria Hip-Hop";
+
+Music music1 = new Music();
+music1.Name = "Lembranças";
+music1.Duration = 213;
 
 Music music2 = new Music();
-music2.Name = "Lembranças";
-music2.Artist = "Hungria";
-music2.Duration = 367;
-music2.Disponible = false;
+music2.Name = "Não tenho freio.";
+music2.Duration = 354;
 
-music1.DisplayTechnicalSheet();
-music2.DisplayTechnicalSheet();
+albumDoHungria.AddMusic(music1);
+albumDoHungria.AddMusic(music2);
+
+albumDoHungria.DisplayMusicFromAlbum();
