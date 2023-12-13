@@ -1,15 +1,25 @@
-﻿Album albumDoHungria = new Album();
-albumDoHungria.Name = "Hungria Hip-Hop";
+﻿Band hungria = new Band("Hungria");
 
-Music music1 = new Music();
-music1.Name = "Lembranças";
-music1.Duration = 213;
+Album albumDoHungria = new Album("Hungria Hip-Hop");
 
-Music music2 = new Music();
-music2.Name = "Não tenho freio.";
-music2.Duration = 354;
+Music music1 = new Music(hungria, "Lembranças")
+{
+    Duration = 213,
+    Disponible = true,
+};
+
+Music music2 = new Music(hungria, "Não tenho freio.")
+{
+    Duration = 354,
+    Disponible = false,
+};
 
 albumDoHungria.AddMusic(music1);
 albumDoHungria.AddMusic(music2);
 
+music1.DisplayTechnicalSheet();
+music2.DisplayTechnicalSheet();
+
 albumDoHungria.DisplayMusicFromAlbum();
+hungria.AddAlbum(albumDoHungria);
+hungria.DisplayDiscography();
